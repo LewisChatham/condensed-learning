@@ -87,7 +87,23 @@ footer {
   color: #fff;
 }
 
+.resources {
+  display: none;
+}
+
+.resources a {
+  display: block;
+}
+
 /* TODO: Add styles to display and hide the resource links */
+
+#resource-links:hover + .resources {
+display: block;
+}
+
+
+
+
 
 @media screen and (max-width: 768px) {
   header, main {
@@ -103,3 +119,5 @@ footer {
     text-align: center;
   }
 }
+
+
