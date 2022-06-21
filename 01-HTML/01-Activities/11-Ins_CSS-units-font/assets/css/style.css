@@ -2,7 +2,7 @@
   width: 200px;
   height: 100px;
   /* Font-family property specifies a list of fonts to be used in order of priority */
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-family: "Comic Sans MS", sans-serif;
 }
 
 .section-blue {
