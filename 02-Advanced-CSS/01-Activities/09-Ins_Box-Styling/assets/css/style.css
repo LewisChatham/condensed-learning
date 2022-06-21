@@ -62,7 +62,7 @@ footer {
 
 /* We can use scale to stretch the photo vertically or horizontally */
 .scale {
-  transform: scale(1.5, 1);
+  transform: scale(1.5, 1.5);
 }
 
 /* We can use skew to skew the photo to the left or right */
