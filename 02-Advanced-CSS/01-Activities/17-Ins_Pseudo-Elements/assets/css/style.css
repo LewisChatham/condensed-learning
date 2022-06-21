@@ -19,9 +19,11 @@ h1 {
 
 /* Added the rest of the header text */
 h1::after {
-  font-family: Impact;
-  content: 'Pseudo Elements';
-  color: #8ac4ff;
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background-color: #8ac4ff;
   margin-left: 5px;
 }
 
