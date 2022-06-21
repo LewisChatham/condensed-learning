@@ -3,7 +3,7 @@
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   }
 
-/* TODO: Label selector type */
+/* changes font to lucida sans unicode, back ups */
 body {
   background-color: lemonchiffon;
 }
@@ -16,6 +16,8 @@ footer {
   color: #f0ead6;
   background-color: #191970;
 }
+
+/* sets width and height of backround color */
 
 figure {
   width: 200px;
