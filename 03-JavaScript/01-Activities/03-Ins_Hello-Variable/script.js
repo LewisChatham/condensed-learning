@@ -1,5 +1,6 @@
 // Declares student variable using var keyword 
-var studentName;
+var email = "lewis@lettingaproperty.com";
+
 
 var email = "ethandaines1011@hotmmailcom"
 
@@ -9,8 +10,9 @@ var email = "ethandaines1011@hotmmailcom"
 var studentName = "Abdul";
 var studentAge = 32;
 
+
 // To re-assign a variable, use only the variable's name  
-studentName = "Tonya";
+studentName = "Tonya"
 studentAge = 52;
 
 // To access a value stored in a variable, use the variable's name
@@ -21,4 +23,4 @@ console.log(studentName);
 console.log("My name is ");
 
 // Logs "My name is Tonya"
-console.log("My name is " + studentName);
+console.log(1 + studentName);

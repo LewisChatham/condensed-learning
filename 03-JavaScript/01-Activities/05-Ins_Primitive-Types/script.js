@@ -14,6 +14,7 @@ var myNumberDecimal = 100.100;
 var isMyBooleanTrue = true;
 var isMyBooleanFalse = false;
 
+
 // To check the type of data, use typeof followed by the name of the variable
 // Logs undefined
 console.log(typeof myUndefined);
