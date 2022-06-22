@@ -27,3 +27,5 @@ console.log(planet["neighboringPlanets"][0]);
 planet.tellFunFact();
 planet.showWarning();
   
+
+

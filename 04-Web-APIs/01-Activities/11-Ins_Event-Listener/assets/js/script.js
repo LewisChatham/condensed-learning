@@ -18,3 +18,12 @@ themeSwitcher.addEventListener("click", function() {
     container.setAttribute("class", "dark");
   }
 });
+
+
+function Ethan() {
+
+}
+
+themeSwitcher.addEventListener("click", function () {
+  
+})

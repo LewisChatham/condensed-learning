@@ -4,8 +4,8 @@ var lose = document.querySelector(".lose");
 var timerElement = document.querySelector(".timer-count");
 var startButton = document.querySelector(".start-button");
 
-var chosenWord = "";
-var numBlanks = 0;
+var chosenWord;
+var numBlanks;
 var winCounter = 0;
 var loseCounter = 0;
 var isWin = false;
@@ -77,16 +77,24 @@ function startTimer() {
 // Creates blanks on screen
 function renderBlanks() {
   // Randomly picks word from words array
-  chosenWord = words[Math.floor(Math.random() * words.length)];
-  lettersInChosenWord = chosenWord.split("");
-  numBlanks = lettersInChosenWord.length;
+  chosenWord = words[Math.floor(Math.random() * words.length)]; // boolean
+  lettersInChosenWord = chosenWord.split("");  // ["b", "o", etc]
+  numBlanks = lettersInChosenWord.length; // 7
+
+
+
+
   blanksLetters = []
+
+
   // Uses loop to push blanks to blankLetters array
   for (var i = 0; i < numBlanks; i++) {
     blanksLetters.push("_");
   }
   // Converts blankLetters array into a string and renders it on the screen
   wordBlank.textContent = blanksLetters.join(" ")
+
+
 }
 
 // Updates win count on screen and sets win count to client storage

@@ -8,7 +8,7 @@ if (tagName !== "h1" && tagName !== "h2" && tagName !== "p" && tagName !== "div"
   var tag = document.createElement(tagName);
 
   // Adds text content to created tag
-  tag.textContent = "This was made via prompts. It's a " + tagName + ".";
+  // tag.textContent = "This was made via prompts. It's a " + tagName + ".";
   
   // Appends tag as child of document body
   document.body.appendChild(tag);
