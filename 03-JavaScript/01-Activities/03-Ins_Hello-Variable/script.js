@@ -2,6 +2,10 @@
 var email = "lewis@lettingaproperty.com";
 
 
+var email = "ethandaines1011@hotmmailcom"
+
+
+
 // Uses assignment operator(=) to assign a value
 var studentName = "Abdul";
 var studentAge = 32;
