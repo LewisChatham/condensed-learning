@@ -123,3 +123,28 @@ footer {
     text-align: center;
   }
 }
+
+.keyword {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.keyword span {
+  display: none;
+  min-width: 200px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.keyword:hover span {
+  display: inline-block;
+}

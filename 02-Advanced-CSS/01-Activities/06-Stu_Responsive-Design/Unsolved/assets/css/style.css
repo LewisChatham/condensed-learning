@@ -77,7 +77,7 @@ TODO: Write your answer here
   border-width: 1px;
   border-radius: 10px;
   padding: 10px;
-  flex: 0 0 400px;
+  flex: 1 0 250px;
 }
 
 .card header {

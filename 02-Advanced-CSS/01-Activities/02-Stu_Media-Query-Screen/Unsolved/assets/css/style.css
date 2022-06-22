@@ -12,6 +12,7 @@ header {
   text-align: center;
   background: #13293d;
   color: #fff;
+
 }
 
 .card {
@@ -35,5 +36,28 @@ header {
 }
 
 /* TODO: Use media query to change the width of the cards so they split into two columns at 992px or smaller*/
+@media screen and (max-width: 992px){
+
+  header {
+    background-color: maroon;
+  } 
+  
+  .card{
+  width: 50%;
+  }
+}
+
+
+
 
 /* TODO: Use media query to change the width of the cards so they are stacked on top of each other at 768px or smaller */
+
+@media screen and (max-width:768px){
+  header {
+    background-color: skyblue;
+  }
+
+.card{
+  width: 100%;
+}
+}
