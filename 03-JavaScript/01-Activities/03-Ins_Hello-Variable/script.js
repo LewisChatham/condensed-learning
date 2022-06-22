@@ -1,6 +1,10 @@
 // Declares student variable using var keyword 
 var studentName;
 
+var email = "ethandaines1011@hotmmailcom"
+
+
+
 // Uses assignment operator(=) to assign a value
 var studentName = "Abdul";
 var studentAge = 32;
