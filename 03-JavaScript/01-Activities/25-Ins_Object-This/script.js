@@ -24,7 +24,8 @@ var planet = {
 	  console.log("The planet is unpopulated");
 	}   
   }
-};
+}
+
 
 // Calls object methods
 planet.logFacts();

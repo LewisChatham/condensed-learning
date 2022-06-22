@@ -18,8 +18,11 @@ var playGame = function() {
   userChoice = userChoice.toUpperCase();
 
   // Get random index from array of options
-  var index = Math.floor(Math.random() * options.length);
+  var index = Math.round(Math.random() * options.length);
   var computerChoice = options[index];
+
+
+
 
   window.alert("The computer chose " + computerChoice);
 
@@ -30,10 +33,10 @@ var playGame = function() {
 
   // Check every win condition for the player
   } else if (
-    (userChoice === "R" && computerChoice === "S") || 
-    (userChoice === "P" && computerChoice === "R") || 
+    (userChoice === "R" && computerChoice === "S") ||
+    (userChoice === "P" && computerChoice === "R") ||
     (userChoice === "S" && computerChoice === "P")
-  ) {
+    ) {
     wins++;
     window.alert("You win!");
 

@@ -6,43 +6,44 @@ var lunchBill = 11;
 // Evaluates to true so "Hungry" is logged
 
 if (hungerLevel >= 50) {
-  console.log("Hungry!");
+  console.log("Hungry!");  // true
 }
+
 
 // Evaluates to false so nothing is logged
 if (hungerLevel < 50) {
-  console.log("Hungry!");
+  console.log("Hungry!"); // false
 }
 
 // Else statement 
 // Evaluates to true so "Lunchtime" is logged
 if (isLunchTime === true) {
-  console.log("Lunchtime");
+  console.log("Lunchtime");  //true
 } else {
   console.log("Not Lunchtime");
 }
 
 // isLunchTime is another way of writing "isLunchTime === true"
 if (isLunchTime) {
-  console.log("Lunchtime!!");
+  console.log("Lunchtime!!"); //true
 } else {
   console.log("Not Lunchtime!!");
 }
 
 // Evaluates to false so "It's Lunchtime Already" is logged
 if (!isLunchTime) {
-  console.log("Not Lunchtime Already!!");
+  console.log("Not Lunchtime Already!!"); //false
 } else {
-  console.log("It's Lunchtime Already !!");
+  console.log("It's Lunchtime Already !!"); //true
 }
 
 // Else if allows you to test more than one condition
 // The first condition is false, so the second condition is evaluated. Logs "Cost Rating: $$""
 
 if (lunchBill < 10) {
-  console.log("Cost Rating: $");
+  console.log("Cost Rating: $"); // false
 } else if (lunchBill >= 10 && lunchBill < 15) {
-  console.log("Cost Rating: $$");
+  console.log("Cost Rating: $$"); //true
 } else {
   console.log("Cost Rating: $$$");
 }

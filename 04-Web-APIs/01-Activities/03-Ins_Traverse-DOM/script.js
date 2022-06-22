@@ -8,7 +8,7 @@ console.log("Second child of body: ")
 console.log(document.body.children[1]);
 
 console.log("First child of the ul: ")
-console.log(document.body.children[1].children[0]);
+console.log(document.getElementById("li"));
 
 // Accessing element by id
 var firstChildUl = document.getElementById("first-child-ul");
