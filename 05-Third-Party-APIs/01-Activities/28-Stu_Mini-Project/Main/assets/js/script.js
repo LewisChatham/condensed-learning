@@ -33,6 +33,36 @@ function printProjectData(name, type, hourlyRate, dueDate, days, earnings) {
   
   projectDisplayEl.append(projectRowEl)
 
+<<<<<<< HEAD
+=======
+  var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
+
+  // You can also chain methods onto new lines to keep code clean
+  var totalTdEl = $('<td>').addClass('p-2').text('$' + totalEarnings);
+
+  var deleteProjectBtn = $('<td>').addClass('p-2 delete-project-btn text-center').text('X');
+
+  // By listing each `<td>` variable as an argument, each one will be appended in that order
+  projectRowEl.append(
+    projectNameTdEl,
+    projectTypeTdEl,
+    rateTdEl,
+    dueDateTdEl,
+    daysLeftTdEl,
+    totalTdEl,
+    deleteProjectBtn
+  );
+
+  projectDisplayEl.append(projectRowEl);
+
+  projectModalEl.modal('hide');
+}
+
+function calculateTotalEarnings(rate, days) {
+  var dailyTotal = rate * 8;
+  var total = dailyTotal * days;
+  return total;
+>>>>>>> 9abb7718bed532cd03848302d598206ee522858d
 }
 
 function handleDeleteProject(event) {
