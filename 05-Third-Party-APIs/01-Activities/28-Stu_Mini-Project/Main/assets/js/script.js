@@ -10,76 +10,49 @@ var dueDateInputEl = $('#due-date-input');
 
 // handle displaying the time
 function displayTime() {
-  var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-  timeDisplayEl.text(rightNow);
+  var currentTime = moment().format(`MMMM DD, YYYY [at] h:mm:ss a`)
+  timeDisplayEl.text(currentTime)
 }
 
 // handle printing project data to the page
-function printProjectData(name, type, hourlyRate, dueDate) {
-  var projectRowEl = $('<tr>');
+function printProjectData(name, type, hourlyRate, dueDate, days, earnings) {
+  var projectRowEl = $(`<tr>`) // <tr> </tr>
 
-  var projectNameTdEl = $('<td>').addClass('p-2').text(name);
+  var projectNameEl = $(`<td>`).text(name) // <td> </td>
+  var projectTypeEl = $(`<td>`).text(type)
+  var projectRateEl = $(`<td>`).text(hourlyRate)
+  var projectDateEl = $(`<td>`).text(dueDate)
+  var projectDaysUntillDue = $(`<td>`).text(days)
+  var projectEarnings = $(`<td>`).text(earnings)
 
-  var projectTypeTdEl = $('<td>').addClass('p-2').text(type);
 
-  var rateTdEl = $('<td>').addClass('p-2').text(hourlyRate);
+  var deleteBtn = $(`<td>`).text(`X`).addClass(`delete-project-btn`)
 
-  var dueDateTdEl = $('<td>').addClass('p-2').text(dueDate);
 
-  var daysToDate = moment(dueDate, 'MM/DD/YYYY').diff(moment(), 'days');
-  var daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate);
+  projectRowEl.append(projectNameEl, projectTypeEl, projectRateEl, projectDateEl, projectDaysUntillDue, projectEarnings, deleteBtn)
+  
+  projectDisplayEl.append(projectRowEl)
 
-  var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
-
-  // You can also chain methods onto new lines to keep code clean
-  var totalTdEl = $('<td>')
-    .addClass('p-2')
-    .text('$' + totalEarnings);
-
-  var deleteProjectBtn = $('<td>')
-    .addClass('p-2 delete-project-btn text-center')
-    .text('X');
-
-  // By listing each `<td>` variable as an argument, each one will be appended in that order
-  projectRowEl.append(
-    projectNameTdEl,
-    projectTypeTdEl,
-    rateTdEl,
-    dueDateTdEl,
-    daysLeftTdEl,
-    totalTdEl,
-    deleteProjectBtn
-  );
-
-  projectDisplayEl.append(projectRowEl);
-
-  projectModalEl.modal('hide');
-}
-
-function calculateTotalEarnings(rate, days) {
-  var dailyTotal = rate * 8;
-  var total = dailyTotal * days;
-  return total;
 }
 
 function handleDeleteProject(event) {
-  console.log(event.target);
-  var btnClicked = $(event.target);
-  btnClicked.parent('tr').remove();
+  event.target.parentElement.remove()
 }
 
 // handle project form submission
 function handleProjectFormSubmit(event) {
-  event.preventDefault();
+ event.preventDefault()
 
-  var projectName = projectNameInputEl.val().trim();
-  var projectType = projectTypeInputEl.val().trim();
-  var hourlyRate = hourlyRateInputEl.val().trim();
-  var dueDate = dueDateInputEl.val().trim();
+ var name = projectNameInputEl.val()
+ var type = projectTypeInputEl.val()
+ var hourlyRate = hourlyRateInputEl.val()
+ var dueDate = dueDateInputEl.val()
+ var daysUntilDue = moment(dueDate, `MM DD YYYY`).diff(moment(), "days")+1
+ var earnings = (daysUntilDue * 8) * hourlyRate
 
-  printProjectData(projectName, projectType, hourlyRate, dueDate);
+ printProjectData(name, type, hourlyRate, dueDate, daysUntilDue, earnings)
 
-  projectFormEl[0].reset();
+ projectModalEl.modal(`hide`)
 }
 
 projectFormEl.on('submit', handleProjectFormSubmit);
@@ -87,3 +60,6 @@ projectDisplayEl.on('click', '.delete-project-btn', handleDeleteProject);
 dueDateInputEl.datepicker({ minDate: 1 });
 
 setInterval(displayTime, 1000);
+
+
+
