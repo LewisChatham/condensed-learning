@@ -31,4 +31,9 @@ function getApi() {
     });
 }
 
+
+
+
+
+
 fetchButton.addEventListener('click', getApi);
