@@ -47,7 +47,7 @@ var displayIssues = function (issues) {
     return;
   }
 
-  for (var i = 0; i < issues.length; i++) {
+  for (var i = 0; i < issues.length; i++) {   
     var issueEl = document.createElement('a');
     issueEl.classList = 'list-item flex-row justify-space-between align-center';
     issueEl.setAttribute('href', issues[i].html_url);
