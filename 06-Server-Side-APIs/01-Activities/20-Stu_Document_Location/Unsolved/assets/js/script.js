@@ -12,4 +12,7 @@ window.location.replace(redirectUrl)
  
   // Use a conditional to check the response status.
   // If that status equals the conditional, then redirect to the 404 page.
+
+  
+
 });

@@ -3,5 +3,5 @@ fetch('https://api.github.com/gists/public?since=2020-06-01&per_page=100')
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
+    // console.log(data);
   });
